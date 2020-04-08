@@ -24,6 +24,7 @@ public class SwitchStatementDemo {
 			/*
 			 *  Remove the 'break;' statements and run it again.
 			 *  What did you notice? What does 'break;' do?
+			 *  runs all statements no matter what
 			 */
 			int x = new Random().nextInt(3);
 			switch(x) {

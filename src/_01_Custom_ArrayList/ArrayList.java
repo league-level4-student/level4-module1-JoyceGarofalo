@@ -1,5 +1,7 @@
 package _01_Custom_ArrayList;
 
+import _00_Intro_To_Generics.IntroToGenerics;
+
 @SuppressWarnings("unchecked")
 
 public class ArrayList <T>{
@@ -21,7 +23,7 @@ public class ArrayList <T>{
 	}
 	
 	public void set(int loc, T val) throws IndexOutOfBoundsException {
-		
+				
 	}
 	
 	public void remove(int loc) throws IndexOutOfBoundsException {
@@ -32,4 +34,11 @@ public class ArrayList <T>{
 		
 		return false;
 	}
+
+	public int size() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	
 }
