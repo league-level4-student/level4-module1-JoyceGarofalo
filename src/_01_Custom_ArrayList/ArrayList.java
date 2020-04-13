@@ -12,11 +12,11 @@ public class ArrayList <T>{
 	}
 	
 	public T get(int loc) throws IndexOutOfBoundsException { 
-		if(loc < 0 || loc > list.length) {
-			throw new IndexOutOfBoundsException();
+		if(loc >= 0 && loc < list.length) {
+			return list[loc];
 		}
 		else {
-			return list[loc];
+			return null;
 		}
 	}
 	
@@ -26,19 +26,36 @@ public class ArrayList <T>{
 			list2[i] = list[i];
 		}
 		list2[list2.length-1] = val;
+		list = list2;
 	}
 	
 	public void insert(int loc, T val) throws IndexOutOfBoundsException {
-		
+		T[] list4 = (T[]) new Object[list.length+1];
+		if(loc >= 0 && loc < list.length) {
+			for (int i = 0; i < list4.length; i++) {
+				if(i < loc) {
+					list4[i] = list[i];
+				}
+				else if(i > loc) {
+					list4[i] = list[i-1];
+				}
+				else {
+					list4[i] = val;
+				}
+			}
+		}
+		else {
+			throw new IndexOutOfBoundsException();
+		}
+		list = list4;
 	}
 	
 	public void set(int loc, T val) throws IndexOutOfBoundsException {
-		if(loc > 0 && loc < list.length) {
+		if(loc >= 0 && loc < list.length) {
 			list[loc] = val;
 		}
 		else {
 			throw new IndexOutOfBoundsException();
-
 		}
 	}
 	
@@ -48,18 +65,28 @@ public class ArrayList <T>{
 			list3[i] = list[i];
 		}
 		for (int i = loc+1; i < list.length; i++) {
-			list3[i] = list[i];
+			list3[i-1] = list[i];
 		}
+		list = list3;
 	}
 	
 	public boolean contains(T val) {
-		
-		return false;
+		int contains = 0;
+		for (int i = 0; i < list.length; i++) {
+			if(list[i] == val) {
+				contains += 1;
+			}
+		}
+		if(contains != 0) {
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 
 	public int size() {
-		// TODO Auto-generated method stub
-		return 0;
+		return list.length;
 	}
 
 	
