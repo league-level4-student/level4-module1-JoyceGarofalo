@@ -29,6 +29,7 @@ public class _00_SnakeGame implements ActionListener, KeyListener {
 	public static final int WINDOW_HEIGHT = WINDOW_SCALE * HEIGHT;
 
 	private JFrame window;
+	//window size: w = 750, h = 600
 	private JPanel panel;
 
 	private Snake snake;
@@ -90,13 +91,13 @@ public class _00_SnakeGame implements ActionListener, KeyListener {
 		//   of the game. The smaller the number, the faster it goes.
 		switch(choice) {
 		case "Expert":{
-			timer.setDelay(1);
+			timer.setDelay(60);
 		}
 		case "Moderate":{
-			timer.setDelay(5);
+			timer.setDelay(80);
 		}
 		case "Beginner":{
-			timer.setDelay(9);
+			timer.setDelay(90);
 		}
 		}
 		//3. start the timer
