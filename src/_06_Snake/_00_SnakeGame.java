@@ -91,13 +91,13 @@ public class _00_SnakeGame implements ActionListener, KeyListener {
 		//   of the game. The smaller the number, the faster it goes.
 		switch(choice) {
 		case "Expert":{
-			timer.setDelay(60);
-		}
-		case "Moderate":{
 			timer.setDelay(80);
 		}
+		case "Moderate":{
+			timer.setDelay(200);
+		}
 		case "Beginner":{
-			timer.setDelay(90);
+			timer.setDelay(300);
 		}
 		}
 		//3. start the timer
