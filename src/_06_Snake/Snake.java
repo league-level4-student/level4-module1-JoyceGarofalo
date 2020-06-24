@@ -75,7 +75,7 @@ public class Snake {
 		//1. set the current direction equal to the passed in Direction only if canMove is true.
 		//   set canMove equal to false.
 		//   make sure the snake cannot completely reverse directions.
-		System.out.println(d);
+		//System.out.println(d);
 		
 		
 		if(canMove == true) {
@@ -112,7 +112,7 @@ public class Snake {
 	public void reset(Location loc) {
 		//1. clear the snake
 		snake.clear();
-		snake = new ArrayList<SnakeSegment>();
+		//snake = new ArrayList<SnakeSegment>();
 		//2. set the location of the head
 		head.setLocation(loc);
 		//3. add the head to the snake
